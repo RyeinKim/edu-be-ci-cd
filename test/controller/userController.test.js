@@ -4,7 +4,7 @@ const dbConnect = require('../../database/index');
 const bcrypt = require('bcrypt');
 
 jest.mock('../../database/index');
-jest.mock('../../models/userModel');
+jest.mock('../../model/userModel');
 
 describe('User Controller - loginUser', () => {
     beforeEach(() => {
