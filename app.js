@@ -116,3 +116,5 @@ app.use(errorHandler);
 
 // 초기화 후 서버 시작
 initSessionId();
+
+module.exports = app;
