@@ -1,8 +1,8 @@
-const userModel = require('../models/userModel');
-const dbConnect = require('../dbConnect');
+const userModel = require('../../model/userModel');
+const dbConnect = require('../../database/index');
 const bcrypt = require('bcrypt');
 
-jest.mock('../dbConnect');
+jest.mock('../../database/index');
 
 describe('User Model - loginUser', () => {
     beforeEach(() => {

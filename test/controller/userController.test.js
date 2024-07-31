@@ -1,9 +1,9 @@
 const request = require('supertest');
-const app = require('../app');
-const dbConnect = require('../dbConnect');
+const app = require('../../app');
+const dbConnect = require('../../database/index');
 const bcrypt = require('bcrypt');
 
-jest.mock('../dbConnect');
+jest.mock('../../database/index');
 
 describe('User Controller - loginUser', () => {
     beforeEach(() => {
