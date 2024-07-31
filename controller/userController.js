@@ -28,19 +28,19 @@ const SALT_ROUNDS = 10;
 exports.loginUser = async (request, response, next) => {
     const { email, password } = request.body;
 
-    if (!email) {
-        const error = new Error(STATUS_MESSAGE.REQUIRED_EMAIL);
-        error.status = STATUS_CODE.BAD_REQUEST;
-        throw error;
-    }
-
-    if (!password) {
-        const error = new Error(STATUS_MESSAGE.REQUIRED_PASSWORD);
-        error.status = STATUS_CODE.BAD_REQUEST;
-        throw error;
-    }
-
     try {
+        if (!email) {
+            const error = new Error(STATUS_MESSAGE.REQUIRED_EMAIL);
+            error.status = STATUS_CODE.BAD_REQUEST;
+            throw error;
+        }
+
+        if (!password) {
+            const error = new Error(STATUS_MESSAGE.REQUIRED_PASSWORD);
+            error.status = STATUS_CODE.BAD_REQUEST;
+            throw error;
+        }
+
         const requestData = {
             email,
             password,
